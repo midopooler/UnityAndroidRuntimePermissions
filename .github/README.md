@@ -60,10 +60,13 @@ void Update()
 	{
 		AndroidRuntimePermissions.Permission result = AndroidRuntimePermissions.RequestPermission( "android.permission.WRITE_EXTERNAL_STORAGE" );
 		if( result == AndroidRuntimePermissions.Permission.Granted )
+		{
 			Debug.Log( "We have permission to access external storage!" );
+		}
 		else
+		{
 			Debug.Log( "Permission state: " + result );
-		
+		}
 		// Requesting WRITE_EXTERNAL_STORAGE and CAMERA permissions simultaneously
 		//AndroidRuntimePermissions.Permission[] result = AndroidRuntimePermissions.RequestPermissions( "android.permission.WRITE_EXTERNAL_STORAGE", "android.permission.CAMERA" );
 		//if( result[0] == AndroidRuntimePermissions.Permission.Granted && result[1] == AndroidRuntimePermissions.Permission.Granted )
